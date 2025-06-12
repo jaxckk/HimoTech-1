@@ -1,0 +1,557 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.bgimg{
+  background: url('./images/Hero\ Img.png');
+  width: 100%;
+  height: 600px;
+   
+ }
+
+.Navbar-style{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index:2;
+}
+
+
+.navbar-nav {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 90 px; /* Increased height */
+  padding: 15px 30px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+  color: blue;
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link.active {
+  color: blue;
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+  background: #fff;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-brand img {
+  width: 130px;
+  height: auto;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .navbar-brand img {
+    width: 100px; /* Adjust logo size for smaller screens */
+    height: auto;
+  }
+
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    width: 100%; /* Full-width navbar items */
+    display: none;
+  }
+
+  .navbar-nav.show {
+    display: flex; /* Show menu on toggler click */
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%; /* Full width for mobile links */
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-nav .nav-link.active {
+    font-weight: normal; /* Remove bold font for smaller screens */
+    border-bottom: none;
+  }
+
+  .dropdown-menu {
+    width: 100%; /* Dropdown takes full width on mobile */
+  }
+
+  .dropdown-menu a {
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 80px; /* Smaller logo on very small screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Smaller font size for small screens */
+  }
+
+  .navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
+
+
+.footer {
+  font-size: 14px;
+}
+
+.footer .social-icons a {
+  font-size: 20px;
+}
+
+.footer .btn-primary {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+}
+
+.footer .btn-primary:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Custom CSS for uniform styling */
+.contact-button {
+  position: absolute;
+  top: 70%;/* Slightly adjust for better visibility */
+  left: 5%;
+  
+  width: 110px;
+  height: 110px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-button1 {
+  position: absolute;
+  top: 70%;/* Slightly adjust for better visibility */
+  right: 5px;
+
+  width: 110px;
+  height: 110px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-button:hover,
+.contact-button1:hover {
+  transform: scale(1.1);
+}
+
+/* Image styling */
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text content styling */
+.description-text {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .img {
+    height: 200px;
+  }
+
+  .contact-button,
+  .contact-button1 {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+    bottom: 15px; /* Adjust button position for smaller screens */
+  }
+
+  .description-text {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .contact-button, .contact-button1 {
+    bottom: 20px; /* Ensure buttons are not overlapping */
+  }
+}
+
+/* Styling for headings */
+.web-development-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .web-development-title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Expert Solutions Section */
+.expert-solutions {
+  background: url('./images/what\ we\ do\ \(1\).png');
+  color: white;
+  z-index: '-1';
+
+}
+
+
+.BgHmt{
+  max-height: 400px;
+position: relative;
+bottom: 50px;
+right: 10px;
+z-index:0;
+
+}
+.IdeaImg{
+  max-height: 300px;
+   margin-left: 70px;
+
+position: absolute;
+bottom: 150px;
+right: 100px;
+z-index: 1;
+}
+.Htm-text{
+margin-bottom: 200px;
+}
+.form-control{
+  border-radius: 10px;
+}
+.bgimg1{
+  background: url('./images/Shaping\ innovative.png');
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+
+.bgimg2{
+  width: 100%;
+  height: 500px;
+  display: flex;
+
+  flex-direction: column; /* Stack elements vertically on small screens */
+  align-items: center;
+  justify-content: center;
+  background-image: url('./images/what\ we\ do.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  text-align: center; /* Center align text on smaller screens */
+}
+
+.what-do-text {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.LearnSolutions button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.LearnSolutions button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .container-fluid {
+    flex-direction: row; /* Arrange items in a row on larger screens */
+    justify-content: space-between;
+  }
+
+  .what-do-text {
+    font-size: 2.5rem;
+  }
+
+  .LearnSolutions button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}
+
+/* Center the text in the middle of the image */
+.carousel-caption.custom-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+/* Custom Tabs */
+.custom-indicators {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 100px; /* Adjusted space from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border-bottom: 2px solid white;
+}
+
+.custom-button {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-radius: 15px 15px 0 0;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  color: #007bff;
+}
+
+.custom-button:active {
+  background-color: white;
+  color: red;
+  opacity: 0.7;
+}
+
+.custom-button:hover {
+  background-color: white;
+  opacity: 0.6;
+}
+
+/* Vertical Text */
+.Vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 0px; /* Adjusted left positioning */
+  top: 00px; /* Adjusted top positioning */
+  height: 100%;
+   /* Allows the height to adjust based on content */
+  width: 200px;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Align items to the left */
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+  padding: 10px;
+  z-index: 1;
+}
+
+.Vertical-text h1 {
+  margin-bottom: 10px;
+}
+
+.Vertical-text h4 {
+  font-size: 1.2rem; /* Adjusted for better fit */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-indicators {
+    width: 80%;
+    top: 50px;
+  }
+
+  .Vertical-text {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Vertical-text {
+    width: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* General container styling */
+.container-setup {
+  padding: 20px;
+}
+
+.text-section {
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #4d4dff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: black;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between elements */
+}
+
+.journey-text {
+  color: #007bff;
+  font-size: 1.2rem;
+  margin: 0; /* Remove extra margin */
+}
+
+.text-button {
+  text-align: center;
+  border-left: 4px solid blue; /* Add left border */
+  padding-left: 15px; /* Add padding to align text */
+}
+
+.talk-button {
+  color: #fff;
+  background: blue;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.image-section {
+  text-align: center;
+}
+
+.team-image {
+  max-width: 100%; /* Ensures the image is fully responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 20px 20px 0 0;
+}
+
