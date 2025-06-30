@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="row mt-4">
           <div className="col text-center">
             <p className="mb-0">
-              Copyright © 2024 Himotech Global Pvt Ltd. All Rights Reserved.{" "}
+              Copyright © 2025 Himotech Global Pvt Ltd. All Rights Reserved.{" "}
               <a href="/" className="text-dark text-decoration-none">
                 Privacy Policy
               </a>
