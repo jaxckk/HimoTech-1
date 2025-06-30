@@ -75,8 +75,10 @@ const App = () => {
             <p className="mb-0" style={{ fontSize: "0.9rem" }}>
               At himtech global, we are at the forefront of the Web3 revolution,
               delivering cutting-edge blockchain solutions and crypto projects
-              that shape the digital landscape.
-            </p>
+              that shape the digital landscape.With over 3-4 years of experience,
+               our team excels in creating, innovative, secure and scalable decentralized
+                applications and networks.
+              </p>
           </div>
         </div>
 
