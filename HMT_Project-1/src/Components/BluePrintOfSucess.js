@@ -90,12 +90,12 @@ const CustomCarousel = () => {
             <img src={img2} className="d-block w-100" alt="Second Slide" />
             <div className="carousel-caption custom-caption">
               <h1>Innovation and Development n</h1>
-              <p>
+              <h3>
                 We begin by understanding your goals and crafting a clear,
                 strategic plan that aligns with your vision. This allows us to
                 chart a course for success with measurable milestones and
                 long-term objectives.
-              </p>
+              </h3>
             </div>
           </div>
           <div className="carousel-item">
